@@ -13,8 +13,8 @@ following = "3"
 posts = "20"
 average_likes_per_post = "8.9"
 engagement_rate = "4.2"
-verified_account = "false"
-private_profile = "true"
+verified_account = False
+private_profile = True
 
 print("Username:" , username , "Bio:" , bio)
 print("Quote:" , favorite_quote)
