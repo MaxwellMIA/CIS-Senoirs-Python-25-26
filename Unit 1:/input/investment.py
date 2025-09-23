@@ -29,12 +29,13 @@ interestRate = int(input("interest rate: "))
 
 # convert the investment rate to a decial number
 
-interestRate
+interestRate = interestRate / 100
 
-# initialize the accumulator for the interest
+#loop
 
-# display the header for the table
-
-# compute and display the results for each year
-
-# display the totals for the period
+loop = 0
+investmentTotal = investmentAmount
+while loop < numOfYears:
+    loop = loop + 1
+    investmentTotal = (investmentTotal * interestRate) + investmentTotal
+    print("In year" , loop , "you will have $" , investmentTotal)
