@@ -56,3 +56,45 @@ else:
 print("\n")
 
 #7
+
+for odd in range(1, 11):
+    if odd == 1 or 3 or 5 or 7 or 9:
+        print("Odd")
+    else:
+        print("Even")
+
+print("\n")
+
+#8
+
+for countdown in range(20, -1, -5):
+    print("Countdown:", countdown)
+
+print("\n")
+
+#9
+
+for small in range(1, 7):
+    if small <= 3:
+        print("Number", small, "is small")
+    else:
+        print("Number", small, "is large")
+
+print("\n")
+
+#10
+number = int(input("Enter your number "))
+for numbers in range(1, number, +2):
+    if numbers <= 3:
+        print(numbers, "low")
+    else:
+        print(numbers, "high")
+
+print("\n")
+
+#10 bonus
+for countdowns in range(15, -1, -3):
+    if countdowns >= 1:
+        print(countdowns)
+    else:
+        print("Blastoff!")
