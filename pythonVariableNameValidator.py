@@ -30,10 +30,13 @@ variable_name = input("Enter a variable name to validate: ")
 
 # Check each rule and provide appropriate feedback
 #empty string
-if variable_name == " ":
+if variable_name == "" or variable_name == " ":
     print ("Invalid, variable name cant be empty.")
 elif variable_name in python_keywords:
     print("Invalid, '" , variable_name , "' is a python keyword")
+elif:
+    first_char = variable_name[0]
+    print("test")
 else:
     print("HI!")
 
