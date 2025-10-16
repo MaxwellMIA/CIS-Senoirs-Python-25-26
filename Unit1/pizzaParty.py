@@ -77,7 +77,7 @@ weekend_total += total_cost
 print("\n Sunday night party")
 print(f"{num_pizzas} pizzas: ${cost:.2f}")
 print(f"Tax: ${tax:.2f}")
-print(f"Delivery: ${delivery_fee:.2f}")
+print(f"Selivery: ${delivery_fee:.2f}")
 print(f"Total: ${total_cost:.2f}")
 
 #print out a weekend total
