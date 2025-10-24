@@ -104,7 +104,7 @@ total_four_tuition = (four_tuition1 + four_tuition2 + four_tuition3)
 mile_average = (distance1 + distance2 + distance3) /3
 total_distance = (distance1 + distance2 + distance3)
 
-
+'''
 print("=" * 50)
 print("FINAL ANALYSIS")
 print("=" * 50)
@@ -113,3 +113,4 @@ print(f"Average Annual Tuition: {average_annual}")
 print(f"Total 4-Year Tuition (All Schools): ${total_four_tuition}")
 print(f"Average Distance: {mile_average:.1f} miles")
 print(f"Total distance (visting all, round trips) {total_distance} miles")
+'''
