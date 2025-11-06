@@ -37,35 +37,41 @@ grade_book = [
     }
 ]
 
-def calculate_average(students): 
-    math1 = grade_book[0]["math_grade"]
-    english1 = grade_book[0]["english_grade"]
-    science1 = grade_book[0]["science_grade"]
-    history1 = grade_book[0]["history_grade"]
-
-    total1 = (math1 + english1 + science1 + history1)
-    average1 = (total1 / 4)
-    return average1
-
-average1 = calculate_average(grade_book)
-print(f"{grade_book[0]["name"]}s average grade: {average1:.2f}")
+def get_average(student): 
+    grades = [
+        student["math_grade"],
+        student["english_grade"],
+        student["science_grade"],
+        student["history_grade"],
+    ]
+    return sum(grades) / len(grades)
 
 def print_class_report(students):
     """Prints a formatted report for all students"""
-    # Your code here
-    pass
+    print("class report")
+    for student in students:
+        avg = get_average(student)
+        print(f"Name: {student["name"]}")
+        print(f"Id: {student["id"]}")
+        print(f"Math: {student["math_grade"]}")
+        print(f"English: {student["english_grade"]}")
+        print(f"Science: {student["science_grade"]}")
+        print(f"History: {student["history_grade"]}")
+        print(f"Average: {avg:.2f}")
+        print()
+    print()
 
 def find_top_student(students):
     """Returns the student with the highest average"""
-    # Your code here
-    pass
+    return max(students, key=get_average)
 
 def count_honor_students(students):
     """Counts students with average >= 90"""
-    # Your code here
-    pass
+    return sum(1 for s in students if get_average(s) >= 90)
 
 # Test your functions
 print_class_report(grade_book)
 top_student = find_top_student(grade_book)
+print(f"Top students: {top_student['name']} (ID: {top_student['id']}) with an average of {get_average(top_student):.2f}")
 honor_count = count_honor_students(grade_book)
+print(f"Number of honor students (avg >= 90): {honor_count}")
